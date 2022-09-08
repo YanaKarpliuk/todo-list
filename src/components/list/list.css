@@ -1,0 +1,78 @@
+#task-list {
+	margin: 16px 0;
+	list-style: none;
+}
+
+.list-form {
+	display: flex;
+	align-items: center;
+	background-color: var(--darkest);
+	padding: 16px;
+	border-radius: 8px;
+	box-shadow: var(--shadow);
+	margin-bottom: 16px;
+}
+
+.list-check {
+	display: block;
+	margin-right: 16px;
+	cursor: pointer;
+}
+
+.task-content {
+	flex: 1 1 0%;
+}
+
+.task-content__text {
+  display: block;
+  background-color: var(--darkest);
+	color: #fff;
+	font-size: 18px;
+  width: 90%;
+  border: 0;
+	padding: 5px;
+	border-radius: 4px;
+}
+
+.task-content__text-edit {
+	background-color: var(--darker);
+}
+
+.actions {
+	display: flex;
+	align-items: center;
+}
+
+.actions-btn {
+	display: block;
+	padding: 8px;
+	border-radius: 4px;
+	color: #fff;
+	cursor: pointer;
+	transition: 0.2s ease-in-out;
+}
+
+.actions-btn:hover {
+	opacity: 0.75;
+}
+
+.edit {
+	margin-right: 8px;
+	background-color: var(--personal);
+}
+
+.delete {
+	background-color: var(--danger);
+}
+
+.list-form.done .task-content .task-content__text,
+.list-form.done .task-content .task-content__date {
+	text-decoration: line-through;
+	color: var(--grey);
+}
+
+.task-content__date {
+  font-size: 14px;
+  color: var(--grey);
+	padding-left: 5px;
+}

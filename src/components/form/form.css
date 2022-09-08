@@ -1,0 +1,117 @@
+.new-task__title {
+  color: #fff;
+	font-size: 30px;
+	font-weight: 700;
+	margin-bottom: 8px;
+}
+
+.new-task__form-section {
+	font-size: 14px;
+	font-weight: 700;
+	margin-bottom: 8px;
+}
+
+.new-task__form-input {
+	display: block;
+	width: 100%;
+	font-size: 18px;
+	padding: 16px 25px;
+	color: #fff;
+	background-color: var(--darker);
+	border-radius: 8px;
+	box-shadow: var(--shadow);
+	margin-bottom: 25px;
+}
+
+.options {
+  display: flex;
+  justify-content: space-between;
+	margin-bottom: 25px;
+}
+
+.options-info {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background-color: var(--darker);
+	padding: 25px;
+	box-shadow: var(--shadow);
+	border-radius: 8px;
+	cursor: pointer;
+  width: 100%;
+  margin-right: 10px;
+}
+
+.options-info:last-child {
+  margin-right: 0;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+	display: none;
+}
+
+.bubble {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	border: 2px solid var(--business);
+	box-shadow: var(--business-glow);
+}
+
+.bubble.personal {
+	border-color: var(--personal);
+	box-shadow: var(--personal-glow);
+}
+
+.bubble::after {
+	content: '';
+	display: block;
+	opacity: 0;
+	width: 0px;
+	height: 0px;
+	background-color: var(--business);
+	box-shadow: var(--business-glow);
+	border-radius: 50%;
+	transition: 0.2s ease-in-out;
+}
+
+.bubble.personal::after {
+	background-color: var(--personal);
+	box-shadow: var(--personal-glow);
+}
+
+input:checked ~ .bubble::after {
+	width: 10px;
+	height: 10px;
+	opacity: 1;
+}
+
+.options-info__name {
+	color: #fff;
+	font-size: 18px;
+	margin-top: 16px;
+}
+
+.new-task__form-submit {
+	display: block;
+	width: 100%;
+	font-size: 18px;
+	padding: 16px 25px;
+	color: #FFF;
+	font-weight: 700;
+	text-transform: uppercase;
+	background-color: var(--personal);
+	box-shadow: var(--personal-glow);
+	border-radius: 8px;
+  cursor: pointer;
+	transition: 0.2s ease-out;
+}
+
+.new-task__form-submit:hover {
+	opacity: 0.75;
+}
